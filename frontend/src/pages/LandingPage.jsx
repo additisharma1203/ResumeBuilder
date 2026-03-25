@@ -289,10 +289,7 @@ const LandingPage = () => {
      <footer className={landingPageStyles.footer}>
       <div className={landingPageStyles.footerContainer}>
         <p className={landingPageStyles.footerText}>
-          Crafted with <span className={landingPageStyles.footerHeart}>❤️</span> by{' '}
-          <a href="https://hexagondigitalservices.com" target='_blank' className={landingPageStyles.footerLink}>
-          Digital Services
-          </a>
+          Crafted  <span className={landingPageStyles.footerHeart}>❤️</span> by{' '}Love
         </p>
       </div>
      </footer>
