@@ -2,7 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import 'dotenv/config'
 import { connect } from 'mongoose';
-import { connectDB } from './config/db.js';
+//import { connectDB } from './config/db.js';
 import userRoutes from './routes/userRoutes.js'
 import path from 'path'
 import { fileURLToPath } from 'url';
@@ -16,7 +16,7 @@ const PORT=5000;
 app.use(cors())
 
 //CONNECT DB
-connectDB();
+//connectDB();
 
 // MIDDLEWARE
 app.use(express.json())

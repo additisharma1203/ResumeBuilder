@@ -1,10 +1,10 @@
 import React from 'react'
-import { modalStyles } from '../assets/dummystyle'
+import { modalStyles as styles } from '../assets/dummystyle'
 import {X} from 'lucide-react'
 
 
 const Modal = ({
-    children,isOpen,onClose,titlemhideHeader
+    children,isOpen,onClose,title,hideHeader
 }) => {
     if(!isOpen) return null;
   return (

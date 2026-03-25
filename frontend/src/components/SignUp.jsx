@@ -1,5 +1,5 @@
 import React, { useContext , useState} from 'react'
-import { authStyles as styles} from '../assets/dummystyle'
+import { authStyles} from '../assets/dummystyle'
 import {UserContext} from '../context/UserContext'
 import { useNavigate } from 'react-router-dom'
 import {validateEmail} from '../utils/helper'
@@ -47,23 +47,23 @@ const SignUp = (setCurrentPage) => {
 
 
   return (
-    <div className={styles.signupContainer}>
-        <div className={styles.headerWrapper}>
-            <h3 className={styles.signupTitle}>Create Account</h3>
-            <p className={styles.signupSubtitle}>Join thousands of professional today</p>
+    <div className={authStyles.signupContainer}>
+        <div className={authStyles.headerWrapper}>
+            <h3 className={authStyles.signupTitle}>Create Account</h3>
+            <p className={authStyles.signupSubtitle}>Join thousands of professional today</p>
         </div>
 
-        <form onSubmit={handleSignUp} className={styles.signupForm}>
+        <form onSubmit={handleSignUp} className={authStyles.signupForm}>
           <input value={fullname} onChange={({target})=> setFullName(target.value)} label="Full name" placeholder='abc' type='text'/>
           <input value={email} onChange={({target})=> setEmail(target.value)} label="Email" placeholder='a@gmail.com' type='email'/>
           <input value={password} onChange={({target})=> setPassword(target.value)} label="Password" placeholder='Min 8 characters' type='password'/> 
 
-          {error && <div className={styles.errorMessage}>{error}</div>}
-          <button type="submit" className={styles.signupButton}>Create Account</button>
+          {error && <div className={authStyles.errorMessage}>{error}</div>}
+          <button type="submit" className={authStyles.signupButton}>Create Account</button>
 
           {/* footer */}
-          <p className={styles.switchText}>Already have an account ?{' '}
-            <button type='button' className={styles.switchButton} onClick={()=>setCurrentPage('login')}>Sign In</button>
+          <p className={authStyles.switchText}>Already have an account ?{' '}
+            <button type='button' className={authStyles.switchButton} onClick={()=>setCurrentPage('login')}>Sign In</button>
           </p>
         </form>  
     </div>

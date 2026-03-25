@@ -1,14 +1,15 @@
 import React,{useContext, useState} from 'react'
 import { useNavigate } from 'react-router-dom'
-import { userContext } from '../context/userContext'
+import { UserContext } from '../context/UserContext'
 import { API_PATHS } from '../utils/apiPaths'
 import { authStyles as styles } from '../assets/dummystyle'
+import {validateEmail} from '../utils/helper'
 
 const Login = ({setCurrentPage}) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error,setError] = useState('')
-  const {updateUser}= useContext(userContext);
+  const {updateUser}= useContext(UserContext);
   const navigate = useNavigate()
 
   const handleLogin=async(e)=>{
